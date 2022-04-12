@@ -114,7 +114,7 @@ header{
 }
 
 .navbar-brand {
-  color: #267b98;
+  color: #601C33;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 60px; /*與外層 Header 高度相同達到垂直置中*/
@@ -126,7 +126,7 @@ header{
 }
 
 .nav-link {
-  color: #267b98;
+  color: #601C33;
 }
 
 .navbar-toggle:checked ~ .nav{
@@ -139,4 +139,48 @@ header{
   
   transition: opacity 0.2s ease-out 0.15s;
   opacity: 1;
+}
+
+.navbar-toggle-label{
+  position: absolute;
+  top:0;
+  bottom:0;
+  right: 7.5%;
+  display:flex;
+  align-items: center;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 30px;
+  height: 3px;
+  background: #601C33;
+}
+
+.hamburger{
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after{
+  position: absolute;
+  left:0;
+  content:"";
+  /* background: blue; */
+}
+
+.hamburger::before{
+  top:8px;
+  background: #AC1A03;
+}
+
+.hamburger::after{
+  bottom:8px;
+  background: #FFDD35;
+}
+
+.navbar-toggle {
+  visibility: hidden;
+  position: absolute;
 }
