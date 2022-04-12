@@ -66,13 +66,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
-/********* 電腦版樣式 *********/
-@media screen and (min-width: 768px) {
-  .action {
-    font-size: 1.2rem;
-    padding: 0.75rem 2rem;
-  }
-}
+
 
 /*共用樣式 end*/
 /* =================== */
@@ -183,4 +177,41 @@ header{
 .navbar-toggle {
   visibility: hidden;
   position: absolute;
+}
+
+
+/********* 電腦版樣式 *********/
+@media screen and (min-width: 768px) {
+  .action {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+  }
+
+  /*Main Header*/
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  /*移除漢堡排*/
+  .navbar-toggle-label{
+    display:none;
+  }
+
+  .navbar-brand {
+    grid-column: 2 / 3;
+  }
+
+  /*導覽列 CSS 樣式設定復原*/
+  .nav{
+    all:unset;
+    grid-column: 3 / 4;
+  }
+
+  /*導覽項目 CSS 樣式設定復原*/
+  .nav-item {
+    margin: 0;
+    opacity: 1; 
+  }
+
 }
