@@ -106,7 +106,11 @@ header{
   top: 100%;  /* 父元素边框外面的， */
   width: 100%;
   background: yellow;
-  border:1px dashed grey /*暫時加上邊框，以利於辨識位置*/
+  border:1px dashed grey; /*暫時加上邊框，以利於辨識位置*/
+  /* display: none; */
+  transform-origin: top; /* 設定效果起始點*/
+  transition:transform 0.3s ease-out;
+  transform:scale(1.0)
 }
 
 .navbar-brand {
@@ -117,10 +121,22 @@ header{
 }
 
 .nav-item {
-  
   margin: 1.4rem 0;
+  opacity:0;
 }
 
 .nav-link {
   color: #267b98;
+}
+
+.navbar-toggle:checked ~ .nav{
+  border:2px solid blueviolet; /*測試用，之後刪除*/
+  transform: scale(1, 1);
+}
+
+.navbar-toggle:checked ~ .nav .nav-item {
+  /*開啟時透明度為1*/
+  
+  transition: opacity 0.2s ease-out 0.15s;
+  opacity: 1;
 }
