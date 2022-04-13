@@ -70,6 +70,9 @@ a {
 
 /*共用樣式 end*/
 /* =================== */
+html {
+  scroll-behavior: smooth;
+}
 
 header{
   
